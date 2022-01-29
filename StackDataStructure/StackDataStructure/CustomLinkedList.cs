@@ -53,6 +53,22 @@ namespace StackDataStructure
                 }
                 Console.Write(" " + temp.data);
             }
+
+        }
+        //Method to Add Node at First in Linked List
+        public void AddFirstNode(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} : Nodes inserted in Linked list ", newNode.data);
+        }
+        //Method to Append Linked List
+        public void AppendLinkedList(int data)
+        {
+            AddLast(data);
+            Console.WriteLine("{0} node Appended", data);
+
         }
     }
 }

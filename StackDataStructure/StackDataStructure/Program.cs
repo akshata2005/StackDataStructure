@@ -21,6 +21,9 @@ namespace StackDataStructure
             linkedList.AddLast(70);
             linkedList.AddLast(30);
             linkedList.AddLast(56);
+            linkedList.AppendLinkedList(56);
+            linkedList.AppendLinkedList(30);
+            linkedList.AppendLinkedList(70);
         }
     }
 }
