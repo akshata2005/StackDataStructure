@@ -30,6 +30,9 @@ namespace StackDataStructure
             Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteLastNode());
             Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteFirstNode());
             linkedList.Display();
+            int res = linkedList.Search(90);
+            if (res != 0)
+                Console.WriteLine("\n {0} is present in linkedlist", res);
             Console.ReadLine();
         }
     }

@@ -63,6 +63,7 @@ namespace StackDataStructure
             head = newNode;
             Console.WriteLine("{0} : Nodes inserted in Linked list ", newNode.data);
         }
+
         //Method to Append Linked List
         public void AppendLinkedList(int data)
         {
@@ -101,6 +102,18 @@ namespace StackDataStructure
             int deleteLastNode = newNode.next.data;
             newNode.next = null;
             return deleteLastNode;
+        }
+        public int Search(int value)
+        {
+            Node temp = this.head;
+            while(temp != null)
+            {
+                Console.WriteLine("\n Node is present");
+                return value;
+            }
+            temp=temp.next;
+            Console.WriteLine("\n {0} is not present" ,value);
+            return 0;
         }
     }
 }
