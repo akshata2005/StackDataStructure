@@ -35,6 +35,7 @@ namespace StackDataStructure
             }
             return temp;
         }
+        //method to display the linked list
         public void Display()
         {
             Console.WriteLine("Displaying node");
@@ -82,6 +83,7 @@ namespace StackDataStructure
             this.head = this.head.next;
             return deleteNode;
         }
+        // method to delete last node
         public int DeleteLastNode()
         {
             Node newNode = this.head;
@@ -103,17 +105,38 @@ namespace StackDataStructure
             newNode.next = null;
             return deleteLastNode;
         }
+        //method to search element in linked list
         public int Search(int value)
         {
             Node temp = this.head;
+            int count = 0;
             while(temp != null)
             {
                 Console.WriteLine("\n Node is present");
-                return value;
+                return count;
             }
             temp=temp.next;
+            count++;
             Console.WriteLine("\n {0} is not present" ,value);
-            return 0;
+            return count;
+        }
+        public Node InsertAtMiddleOfLinkedList(int data,int position)
+        {
+            Node newnode = new Node(data);
+            Node previousnode=null;
+            Node currentnode=this.head;
+            int count = 0;
+            while(currentnode != null && count<position)
+            {
+                previousnode = currentnode;
+                currentnode = currentnode.next;
+                count++;
+            }
+            newnode.next = previousnode;
+            previousnode = newnode;
+            Console.WriteLine("\n Element {0} Inserted at position {1}.", data, position);
+            Display();
+            return this.head;
         }
     }
 }

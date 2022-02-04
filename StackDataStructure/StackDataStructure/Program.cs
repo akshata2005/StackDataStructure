@@ -16,6 +16,7 @@ namespace StackDataStructure
             Console.WriteLine("Insert at Last");
             linkedList.AddLast(56);
             linkedList.AddLast(30);
+            linkedList.AddLast(40);
             linkedList.AddLast(70);
             Console.WriteLine();
             Console.WriteLine("insert at first");
@@ -27,12 +28,14 @@ namespace StackDataStructure
             //linkedList.AppendLinkedList(30);
             //linkedList.AppendLinkedList(70);
             //linkedList.DeleteFirstNode(56);
-            Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteLastNode());
-            Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteFirstNode());
+            //Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteLastNode());
+            //Console.WriteLine("\n {0} is deleted from linkedlist", linkedList.DeleteFirstNode());
+            //linkedList.Display();
+            //linkedList.Search(30);
+            //if (res != 0)
+            //Console.WriteLine("\n {0} is present in linkedlist");
+            linkedList.InsertAtMiddleOfLinkedList(1,30);
             linkedList.Display();
-            int res = linkedList.Search(90);
-            if (res != 0)
-                Console.WriteLine("\n {0} is present in linkedlist", res);
             Console.ReadLine();
         }
     }
