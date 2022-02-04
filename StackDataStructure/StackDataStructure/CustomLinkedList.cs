@@ -138,5 +138,41 @@ namespace StackDataStructure
             Display();
             return this.head;
         }
+        public void RemoveElement(int element)
+        {
+            Node temp = head, prev = null;
+            if (temp != null && temp.data == element)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != element)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+
+            prev.next = temp.next;
+            Console.WriteLine(" Element : {0} is Removed..", element);
+        }
+        public int Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine(" LinkedList is empty...");
+                return 0;
+            }
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine(" Length of LinkedList is : " + " " + count);
+            return count;
+        }
     }
 }
